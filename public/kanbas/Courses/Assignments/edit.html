@@ -1,0 +1,106 @@
+<h1>Assignment Editor</h1>
+<table>
+  <tr>
+    <td valign="top"></td>
+    <td valign="top"></td>
+    <td valign="top">
+      <h3>Assignment Name</h3>
+      <form action="/Kanbas/Courses/Assignments">
+        <input value="A1 - ENV + HTML" />
+        <br />
+
+        <textarea cols="50" rows="10">This is the description of the assignment</textarea>
+        <br />
+
+        <label for="points">Points</label>
+        <br />
+
+        <input
+          id="points"
+          max="100"
+          min="50"
+          step="5"
+          type="number"
+          value="100"
+        />
+        <br />
+
+        <label for="assignmentGroup">Assignment Group</label>
+        <select name="assignmentGroup" id="assignmentGroup">
+            <option value="ASSIGNMENTS" selected>ASSIGNMENTS</option>
+        </select>
+        <br />
+
+        <label for="displayGrade">Display Grade as</label>
+        <select name="displayGrade" id="displayGrade">
+          <option value="percentage" selected>Percentage</option>
+        </select>
+        <br />
+
+        <label for="submissionType">Submission Type</label>
+        <select name="submissionType" id="submissionType">
+          <option value="online" selected>Online</option>
+        </select>
+        <br />
+
+        <label for="submissionAttempts">Submission Attempts</label>
+        <select name="submissionAttempts" id="submissionAttempts">
+          <option value="unlimited" selected>Unlimited</option>
+        </select>
+        <br />
+
+        Online Entry Options
+        <br />
+
+        <input id="text-entry" type="checkbox" />
+        <label for="text-entry">Text Entry</label>
+        <br />
+
+        <label> <input type="checkbox" /> Website URL </label>
+        <br />
+
+        <input type="checkbox" checked /> Media Recording<br />
+        <input type="checkbox" /> Annotation<br />
+        <input type="checkbox" /> Updloads
+        <br />
+
+        <label for="plagiarismReview">Plagiarism Review</label>
+        <select name="plagiarismReview" id="plagiarismReview">
+          <option value="None" selected>None</option>
+        </select>
+        <br />
+
+        <label for="groupAssignment">Group Assignment</label>
+        <input type="checkbox" id="groupAssignment" />
+        <br />
+
+        <label for="peerReview">Peer Review</label>
+        <input type="checkbox" id="peerReview" />
+        <br />
+
+        Assign
+        <br />
+        <label for="assignTo">Assign to</label>
+        <select name="assignTo" id="assignTo">
+          <option value="Everyone" selected>Everyone</option>
+        </select>
+        <br />
+
+        <label for="dueDate">Due</label>
+        <input type="date" id="dueDate" value="2023-09-21" min="2023-09-07" max="2023-09-28" />
+        <br />
+
+        <label for="availableDate">Available from</label>
+        <input type="date" id="availableDate" value="2023-09-21" min="2023-09-07" max="2023-09-28" />
+        <br />
+
+        <label for="untilDate">Until</label>
+        <input type="date" id="untilDate" value="2023-09-21" min="2023-09-07" max="2023-09-28" />
+        <br />
+
+        <button>Cancel</button>
+        <button>Save</button>
+      </form>
+    </td>
+  </tr>
+</table>
