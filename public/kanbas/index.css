@@ -1,0 +1,83 @@
+.mainnavbar {
+    background: black;
+    width: 85px;
+    border-right-width: 0px;
+    padding-right: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border-left-width: 0px;
+    padding-left: 0px;
+}
+
+/** ul within the mainnavbar */
+.mainnavbar ul {
+    list-style-type: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/** li within the mainnavbar */
+.mainnavbar ul li {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.mainnavbar ul li i {
+    color: red
+}
+
+
+/** a within the mainnavbar */
+.mainnavbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.selectedMain {
+    background: white;
+    color: red;
+}
+
+.secondNavbar {
+    width: 190px;
+}
+
+/** ul within the secondNavbar */
+.secondNavbar ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+/** li within the secondNavbar */
+.secondNavbar ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+/** a within the secondNavbar */
+.secondNavbar ul li a {
+    color: red;
+    text-decoration: none;
+}
+
+.selectedSecond {
+    border: black;
+    color: black;
+    margin-left: 8px;
+    border-left: inset;
+}
+
+.standardButton {
+    background-color: #cdcdcd;
+    outline: auto;
+    outline-color: black;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}

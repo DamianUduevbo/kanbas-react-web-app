@@ -3,29 +3,40 @@
     first col is the Kanbas (Canvas) navbar
     second col is the Course navbar
 -->
+
+<head>
+  <link href="../../index.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/e1be8c2be9.js" crossorigin="anonymous"></script>
+</head>
+
 <table border="1" width="100%">
   <tbody>
     <tr>
-      <td valign="top">
+      <td valign="top" class="mainnavbar">
         <ul>
           <li>
             <a href="/Kanbas/">Northeastern</a>
           </li>
           <li>
+            <i class="fa fa-user" aria-hidden="true"></i>
             <a href="/Kanbas/Profile/">Account</a>
           </li>
           <li>
+            <i class="fa-solid fa-gauge"></i>
             <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
           </li>
-          <li>
-            <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
+          <li style="background: white; color: red;">
+            <i class="fa-solid fa-book"></i>
+            <a href="/Kanbas/Courses/Home/screen.html" style="background: white; color: red;">Courses</a>
           </li>
           <li>
+            <i class="fa-solid fa-inbox"></i>
             <a href="#">Inbox</a>
           </li>
         </ul>
       </td>
-      <td valign="top">
+
+      <td valign="top" class="secondnavbar">
         <ul>
           <li>
             <a href="/Kanbas/Courses/Home/screen.html">Home</a>
@@ -47,6 +58,7 @@
           </li>
         </ul>
       </td>
+      
       <td valign="top">
         <button>Collapse All</button>
         <button>View Progress</button>
