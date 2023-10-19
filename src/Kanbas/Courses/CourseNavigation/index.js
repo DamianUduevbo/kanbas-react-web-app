@@ -6,12 +6,12 @@ function CourseNavigation() {
   const { pathname } = useLocation();
 
   return (
-    <div className="list-group" style={{ width: 150 }}>
+    <div className="secondNavbar" style={{ width: 150 }}>
       {links.map((link, index) => (
         <Link
           key={index}
           to={`/Kanbas/Courses/${courseId}/${link}`}
-          className={`list-group-item ${pathname.includes(link) && "active"}`}>
+          className={`list-group-item py-2 ${pathname.includes(link) && "border border-dark active"}`}>
           {link}
         </Link>
       ))}

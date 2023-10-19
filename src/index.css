@@ -58,7 +58,8 @@ code {
 }
 
 .secondNavbar {
-  width: 190px;
+  margin-left: 20px;
+  width: 150px;
 }
 
 /** ul within the secondNavbar */
