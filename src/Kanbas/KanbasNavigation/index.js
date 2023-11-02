@@ -1,11 +1,16 @@
 import { Link, useLocation } from "react-router-dom";
-import { AiFillDashboard, AiFillRead } from "react-icons/ai";
-import { BsFillPersonFill, BsFillCalendarFill } from "react-icons/bs";
-
+import { AiFillDashboard, AiFillRead, AiOutlineFundProjectionScreen } from "react-icons/ai";
+import {
+  BsFillPersonFill,
+  BsFillCalendarFill,
+  BsFillInboxesFill,
+  BsClockHistory,
+} from "react-icons/bs";
+import { BiHelpCircle } from "react-icons/bi";
 
 function KanbasNavigation() {
-  const links = ["Account", "Dashboard", "Courses", "Calendar"];
-  const icons = [<BsFillPersonFill />, <AiFillDashboard />, <AiFillRead />, <BsFillCalendarFill />];
+  const links = ["Account", "Dashboard", "Courses", "Calendar", "Inbox", "History", "Studio", "Commons", "Help"];
+  const icons = [<BsFillPersonFill />, <AiFillDashboard />, <AiFillRead />, <BsFillCalendarFill />, <BsFillInboxesFill />, <BsClockHistory />, <AiOutlineFundProjectionScreen />, <BsFillPersonFill />, <BiHelpCircle />];
 
   const { pathname } = useLocation();
   return (
