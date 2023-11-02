@@ -43,5 +43,15 @@
         "_id": "A303",
         "title": "Systems Engineering Exam",
         "course": "RS103"
+    },
+    {
+        "_id": "A401",
+        "title": "Thermal Analysis",
+        "course": "RS4570"
+    },
+    {
+        "_id": "A402",
+        "title": "Structural Analysis",
+        "course": "RS4570"
     }
 ]
