@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -6,13 +6,43 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+
+import { findModulesForCourse, createModule } from "./client";
+import * as client from "./client";
 
 function ModuleList() {
   const { courseId } = useParams();
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
+
+  const handleUpdateModule = async () => {
+    // eslint-disable-next-line
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+
+  useEffect(() => {
+    findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+      );
+  }, [courseId]);
 
   return (
     <ul className="list-group" style={{ width: "75%" }} >
@@ -35,12 +65,12 @@ function ModuleList() {
           <div className="d-flex justify-content-end flex-row gap-2 py-4 ">
             <button
               className="border-0 rounded-2 bg-danger text-white px-2 py-1"
-              onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+              onClick={handleAddModule}>
               Add
             </button>
             <button
               className="border-0 rounded-2 text-black px-2 py-1"
-              onClick={() => dispatch(updateModule(module))}>
+              onClick={handleUpdateModule}>
               Update
             </button>
           </div>
@@ -55,16 +85,16 @@ function ModuleList() {
             <p>{module.course}</p>
 
             <div className="d-flex flex-row gap-2">
-            <button
-              className="border-0 rounded-2 text-black px-2 py-1"
-              onClick={() => dispatch(setModule(module))}>
-              Edit
-            </button>
-            <button
-              className="border-0 rounded-2 bg-danger text-white px-2 py-1"
-              onClick={() => dispatch(deleteModule(module._id))}>
-              Delete
-            </button>
+              <button
+                className="border-0 rounded-2 text-black px-2 py-1"
+                onClick={() => dispatch(setModule(module))}>
+                Edit
+              </button>
+              <button
+                className="border-0 rounded-2 bg-danger text-white px-2 py-1"
+                onClick={() => handleDeleteModule(module._id)}>
+                Delete
+              </button>
             </div>
           </li>))}
     </ul>
