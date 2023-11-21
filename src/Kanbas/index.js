@@ -16,6 +16,7 @@ function Kanbas() {
 
   const findAllCourses = async () => {
     const response = await axios.get(URL);
+    console.log('URL', URL);
     console.log('response.data', response.data);
     setCourses(response.data);
   };

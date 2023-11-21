@@ -15,9 +15,7 @@ function Courses({ courses }) {
   const URL = "https://kanbas-node-server-app-swmp.onrender.com/api/courses";
 
   const findCourseById = async (courseId) => {
-    const response = await axios.get(
-      `${URL}/${courseId}`
-    );
+    const response = await axios.get(`${URL}/${courseId}`);
     setCourse(response.data);
   };
 
